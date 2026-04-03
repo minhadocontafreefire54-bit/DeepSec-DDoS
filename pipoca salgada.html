@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEEPSEC | Cyber Offensive & Defense</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --accent: #0070f3; /* Azul mais realístico, estilo tech moderna */
+            --bg: #0a0a0a;
+            --surface: #161616;
+            --text-main: #ededed;
+            --text-dim: #888888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header / Nav */
+        nav {
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            font-size: 1.4rem;
+            letter-spacing: -1px;
+        }
+
+        .logo span { color: var(--accent); }
+
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        nav ul li a:hover { color: var(--text-main); }
+
+        /* Hero Section - Mais Humano */
+        .hero {
+            padding: 180px 8% 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 4.5rem;
+            line-height: 1;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero-text p {
+            color: var(--text-dim);
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            height: 500px;
+            background: linear-gradient(to bottom right, rgba(0,112,243,0.2), transparent),
+                        url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop') center/cover;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Seção Ferramentas (Tools) */
+        .tools { padding: 100px 8%; background: var(--surface); }
+        .section-label { color: var(--accent); font-family: 'JetBrains Mono'; font-weight: 700; margin-bottom: 10px; display: block; }
+        .section-title { font-size: 2.5rem; margin-bottom: 50px; }
+
+        .tool-card {
+            background: #1e1e1e;
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .tool-card:hover { border-color: var(--accent); transform: scale(1.01); }
+
+        .tool-info h3 { font-family: 'JetBrains Mono'; font-size: 1.5rem; margin-bottom: 5px; }
+        .tool-info p { color: var(--text-dim); }
+
+        .btn-tool {
+            background: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 8%;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            color: var(--text-dim);
+        }
+
+        .badge {
+            background: rgba(0, 112, 243, 0.1);
+            color: var(--accent);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero-text h1 { font-size: 3rem; }
+            .hero-text p { margin: 0 auto 30px; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">DEEP<span>SEC</span></div>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">A Equipe</a></li>
+            <li><a href="#tools">Arsenal</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <span class="badge">DISPONÍVEL PARA CONTRATAÇÃO</span>
+            <h1>Cibercriminosos nunca dormem. <br>Nós também não.</h1>
+            <p>A DeepSec é uma equipe de segurança ofensiva focada em testar os limites de infraestruturas modernas.</p>
+            <a href="#tools" class="btn-tool" style="display: inline-flex; width: fit-content;">VER NOSSO ARSENAL</a>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+
+    <section class="tools" id="tools">
+        <span class="section-label">// NOSSAS FERRAMENTAS</span>
+        <h2 class="section-title">Tecnologia de Campo</h2>
+
+        <div class="tool-list">
+            <div class="tool-card">
+                <div class="tool-info">
+                    <h3>01. DEEPSEC-DDOS</h3>
+                    <p>Script Python de alta performance para testes de stress e negação de serviço.</p>
+                </div>
+                <a href="https://github.com/minhadocontafreefire54-bit/DeepSec-DDoS/blob/main/deep.py" target="_blank" class="btn-tool">
+                    <i class="fab fa-github"></i> REPOSITÓRIO
+                </a>
+            </div>
+
+            <div class="tool-card" style="margin-top: 20px; opacity: 0.6;">
+                <div class="tool-info">
+                    <h3>02. BREACH-SCANNER</h3>
+                    <p>Mapeamento de vulnerabilidades em portas TCP/UDP (Em breve).</p>
+                </div>
+                <span style="font-family: 'JetBrains Mono'; font-size: 0.8rem;">[EM DESENVOLVIMENTO]</span>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 100px 8%;" id="about">
+        <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Quem somos?</h2>
+        <p style="color: var(--text-dim); max-width: 800px; font-size: 1.1rem;">
+            Somos programadores e analistas independentes. Diferente de grandes corporações, nós trabalhamos com a realidade do código puro. 
+            Nosso objetivo é fornecer ferramentas que permitam a desenvolvedores e administradores de sistema testarem suas próprias defesas contra as táticas mais agressivas do mercado.
+        </p>
+    </section>
+
+    <footer>
+        <p>DEEPSEC GROUP &copy; 2026 | Desenvolvido para operações de segurança.</p>
+    </footer>
+
+</body>
+</html>
